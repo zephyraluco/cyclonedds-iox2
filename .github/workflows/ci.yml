@@ -8,9 +8,16 @@ on:
 
 jobs:
   build:
-    name: Build (Ubuntu)
-    runs-on: ubuntu-latest
+    name: Build (${{ matrix.arch }})
+    runs-on: ${{ matrix.runner }}
     timeout-minutes: 120
+    strategy:
+      matrix:
+        include:
+          - arch: x64
+            runner: ubuntu-latest
+          - arch: arm64
+            runner: ubuntu-24.04-arm
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -38,9 +45,13 @@ jobs:
         run: |
           ./tools/build.sh
 
-      - name: Upload install artifact
+      - name: Create deb package
+        run: |
+          ./tools/make_deb.sh "" /usr/local
+
+      - name: Upload deb package
         if: success()
         uses: actions/upload-artifact@v6
         with:
-          name: install
-          path: install
+          name: deb-${{ matrix.arch }}
+          path: dist/*.deb
