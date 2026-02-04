@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    name: Build (Ubuntu)
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          submodules: 'recursive'
+          fetch-depth: 0
+
+      - name: Set up Rust
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake ninja-build pkg-config libacl1-dev git
+
+      - name: Make scripts executable
+        run: |
+          chmod +x tools/*.sh || true
+
+      - name: Run build script
+        env:
+          CARGO_HOME: ${{ github.workspace }}/.cargo
+        run: |
+          ./tools/build.sh
+
+      - name: Upload install artifact
+        if: success()
+        uses: actions/upload-artifact@v6
+        with:
+          name: install
+          path: install

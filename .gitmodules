@@ -1,0 +1,9 @@
+[submodule "cyclonedds"]
+	path = cyclonedds
+	url = https://github.com/eclipse-cyclonedds/cyclonedds.git
+[submodule "cyclonedds-cxx"]
+	path = cyclonedds-cxx
+	url = https://github.com/eclipse-cyclonedds/cyclonedds-cxx.git
+[submodule "iceoryx2"]
+	path = iceoryx2
+	url = https://github.com/eclipse-iceoryx/iceoryx2.git
