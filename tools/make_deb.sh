@@ -39,10 +39,9 @@ if [ -e ${route}/../dist ]; then
 fi
 mkdir -p ${route}/../dist/${pkg_name}
 mkdir -p ${route}/../dist/${pkg_name}/DEBIAN
-mkdir -p ${route}/../dist/${pkg_name}/${tgt_install_prefix}
 
 ## 2. copy targets to deb ready dir
-cp -r ${route}/../install/* ${route}/../dist/${pkg_name}/${tgt_install_prefix}/
+cp -r ${route}/../install/* ${route}/../dist/${pkg_name}/
 
 ## 3. make various config files under DEBIAN dir
 cd ${route}/../dist/${pkg_name}/DEBIAN
