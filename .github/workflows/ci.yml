@@ -49,9 +49,3 @@ jobs:
         run: |
           ./tools/make_deb.sh "" /usr/local
 
-      - name: Upload deb package
-        if: success()
-        uses: actions/upload-artifact@v6
-        with:
-          name: deb-${{ matrix.arch }}
-          path: dist/*.deb
