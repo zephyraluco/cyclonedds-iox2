@@ -15,6 +15,8 @@ if [ "${tgt_version}" == "" ]; then
         echo "No version number can be achieved from git, so we use value in '${pkg_name}/version' as the target version: ${tgt_version}"
     fi
 fi
+# strip leading 'v' so dpkg version starts with a digit (e.g. v1.0.0 -> 1.0.0)
+tgt_version="${tgt_version#v}"
 echo ${tgt_version} > ${route}/../version
 echo "Version is ${tgt_version} and it has been written into 'proj_root/version'"
 
