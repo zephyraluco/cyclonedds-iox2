@@ -27,7 +27,21 @@ cd cyclonedds-iox2
 构建产物安装至 `install/`（前缀 `/usr/local`），按顺序完成：
 1. **iceoryx2** — 编译 Rust FFI 静态库
 2. **cyclonedds** — 启用 `ENABLE_ICEORYX2=On`，链接 iceoryx2-c
-3. **cyclonedds-cxx** — 构建 C++ 绑定
+3. **cyclonedds-cxx**（可选）— 构建 C++ 绑定
+
+#### 构建选项
+
+| 参数 | 说明 |
+|---|---|
+| `--build-cxx` | 同时编译 cyclonedds-cxx（C++ 绑定）；同时将 iceoryx2 的 `BUILD_CXX` 设为 `ON` |
+
+```bash
+# 仅构建 iceoryx2 + cyclonedds（默认）
+./tools/build.sh
+
+# 同时构建 cyclonedds-cxx
+./tools/build.sh --build-cxx
+```
 
 ### 打包为 .deb
 
