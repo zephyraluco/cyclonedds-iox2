@@ -1,0 +1,102 @@
+{
+  "timestamp_utc": "2026-10-18T09:33:12Z",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "versions": {
+    "cyclonedds": "6495609d7101992f1976fe9dab06ed790f287bda",
+    "cyclonedds-cxx": "33d27ffff4d76021d88653f778cc001aa1a2bb7a",
+    "iceoryx2": "135d09dd8b29f321f1725920d434864c4e512378"
+  },
+  "parent_commit": "0a684079a83d81c2b7982834b1339e7e79c14342",
+  "working_tree": " M .github/workflows/ci.yml\n M README.md\n M tools/build.sh\n?? .gitignore\n?? benchmarks/\n?? config/\n?? docs/\n?? tools/build_benchmarks.sh\n",
+  "parameters": {
+    "build": "/workspace/cyclonedds-iox2/build/benchmarks-standard",
+    "prefix": "/workspace/cyclonedds-iox2/install/usr/local",
+    "output": "/workspace/cyclonedds-iox2/benchmarks/results/standard-smoke",
+    "languages": [
+      "c",
+      "cpp",
+      "rust"
+    ],
+    "modes": [
+      "udp",
+      "iox2-copy",
+      "iox2-loan"
+    ],
+    "sizes": [
+      64,
+      4096,
+      65536
+    ],
+    "windows": [
+      1,
+      16
+    ],
+    "samples": 64,
+    "warmup": 32,
+    "repeats": 1,
+    "domain": 71,
+    "timeout": 40,
+    "seed": 20261018,
+    "interop": true
+  },
+  "cyclonedds_rust_revision": "ef0dd5cc1477b29449aba1f717d9496db5953b2a",
+  "toolchains": {
+    "cc": "cc (Debian 14.2.0-19) 14.2.0",
+    "c++": "c++ (Debian 14.2.0-19) 14.2.0",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "cmake": "cmake version 4.4.4"
+  },
+  "config_sha256": {
+    "config/iceoryx2.toml": "ba6aed3ac385497bf7feb54aca8ebe4374aef0d0443e167511a6cc1a4b1886c3",
+    "config/iox2.xml": "b94627ffd2489d671e6efa9968ba59bb9e1d863846ef09be769834e0464ea53b",
+    "config/udp.xml": "ceb1c6431b841a0ed06dbf57e8707b2505da628ec1bc8355e72e523738cb639c"
+  },
+  "source_sha256": {
+    "benchmarks/CMakeLists.txt": "fe0038fb6cbe3dd3eea59abe27cfa156349152049c6902722458e330ccbac028",
+    "benchmarks/Sample.idl": "110dcce8d50155d149a22e765508c9371eaeeb40acea491cddd2caca5bd25eb5",
+    "benchmarks/c_main.c": "945b1434ee64faa5461ca308d421a46fd54888d6ac96c265dfd3e5d4b2e2cb69",
+    "benchmarks/check_guards.py": "41047bb8626ec018a984ab6ef0091cb6b196e9dbb378fc696f7d3c105291afdb",
+    "benchmarks/cpp_main.cpp": "abf5a9ae096887a67192a1c109680a4178d7dcc21bcfae2a571ace8236aecceb",
+    "benchmarks/endpoint.c": "faeb0e7222ad4c41c8825b1de8230e675c2b646f0b7782a7d5a5b1b77f9afdd3",
+    "benchmarks/endpoint.h": "d943bff573dd15d973c2cee249954ece77a436de6521178a95d4108301495de3",
+    "benchmarks/probe_rust_api.py": "824fe0bd6ea3f9f15365b28f2a0cd328bc682571b2980dbac4d2a0bbcfa886d7",
+    "benchmarks/report.py": "c7bce54d2f767198a1387f8981314afd7ca6fc211a1aabb1baaf7546b4d0fd96",
+    "benchmarks/run.py": "0e55f99deb6b22293406c7e864d341653d54b2b274c7f4fc7a4b20ea9bf6ac95",
+    "benchmarks/rust/Cargo.lock": "8c6d95bc452e6ac1c34adf59717858b5d9e3da7281f50d6429f54c32f94940ca",
+    "benchmarks/rust/Cargo.toml": "ac9995f3d52b5a8c7131ead281bd3a423fc719a567d8ebf63e32b4d57fa35863",
+    "benchmarks/rust/build.rs": "0a29e60d1b6d57df6fe2422901f4d3cc70d67abe518e42f2c19fb85d021d5c53",
+    "benchmarks/rust/src/bin/high_level_probe.rs": "39dfb0b8c4122173048ec759e630ae016dbd07bd4c8de2e8ed5383b71c0fcc3c",
+    "benchmarks/rust/src/main.rs": "e6ffb4777cc21808b6bc4f80f10bb3dae0dac123873ffdf4202e4e0712730bbe",
+    "tools/build_benchmarks.sh": "a81f08a30f251f0f2b1a3df5982d18eeb1eb8e041a441ef6b160f6ff0a80eba9"
+  },
+  "binary_sha256": {
+    "/workspace/cyclonedds-iox2/build/benchmarks-standard/bench_c": "280cde88f40f6cdfe675a97da74f77ce0a2c6350286a56fb546f9ac2ff3b2e59",
+    "/workspace/cyclonedds-iox2/build/benchmarks-standard/bench_cpp": "9a9b3877c41f23d5521b15845bb91a1faebc108e5eb67cc03ad1ea335fd8991b",
+    "/workspace/cyclonedds-iox2/build/benchmarks-standard/rust/release/shm-bench-rust": "c8686f7f45c6fbc56c24e01a730b1daff53119a60042e26b8fcba22e6205b073"
+  },
+  "library_sha256": {
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libcycloneddsdyntypelib.so": "cbdccadbe20af9abc597b967f40f99e7f7e41584aed7547c6033c11fc2bde5c7",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libcycloneddsidl.so": "fe87615c773e4a59842df30f7db256f5072fedd03f0964404222f2643ace147c",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libcycloneddsidlc.so": "05a8cf8508ef5ccca8374f61449c5c7f2e6c7a966eff2fc4d747e8f5a6fd84ba",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libcycloneddsidlcxx.so": "460377c777ad3ea79ec0042410498b6c7b91a81de3fc13ca0373890e4afa5d4c",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libdds_security_ac.so": "ac33f83d10b817de3b0b5b433ba39205586576e84cfdbad68be456c7f2f4fd35",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libdds_security_auth.so": "e75a3ced34a3fadc7f649381e6b7eaab9a0d76aa656877ef446641e4abc4a603",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libdds_security_crypto.so": "50fc6469f4a0f2f53cf064729d2b9c7837cccedefa8cdf3f243b2e5334928b92",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libddsc.so": "d06924e184aa34c3358b0ae3495a2e3fdacb4c9cdb930db1225cf552b45e407e",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libddscxx.so": "a729c569c4e117c844b7175b3253949f5c1d6e26d181ff7ce607efc510b5633e",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libiceoryx2_cxx.so": "fb9ce4f0f39abd523a074570f1d0ff96280c76528155ad5b948230da5c3c4842",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libiceoryx2_ffi_c.so": "1f91a7892fc79e873a7b82a4f3ca7176c1b5dbff9508433e5249227418e766e9",
+    "/workspace/cyclonedds-iox2/install/usr/local/lib/libpsmx_iox2.so": "102c416259045d9226ed154c8016f96626b86cba54051a663fe14b3d7e710947"
+  },
+  "/sys/fs/cgroup/cpu.max": "400000 100000\n",
+  "/sys/fs/cgroup/memory.max": "34359738368\n",
+  "/proc/cpuinfo": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 207\nmodel name\t: INTEL(R) XEON(R) PLATINUM 8573C\nstepping\t: 2\nmicrocode\t: 0x1\ncpu MHz\t\t: 2299.998\ncache size\t: 266240 KB\nphysical id\t: 0\nsiblings\t: 5\ncore id\t\t: 0\ncpu cores\t: 5\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 28\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs retbleed bhi spectre_v2_user its\nbogomips\t: 4599.99\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 57 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 207\nmodel name\t: INTEL(R) XEON(R) PLATINUM 8573C\nstepping\t: 2\nmicrocode\t: 0x1\ncpu MHz\t\t: 2299.998\ncache size\t: 266240 KB\nphysical id\t: 0\nsiblings\t: 5\ncore id\t\t: 1\ncpu cores\t: 5\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 28\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs retbleed bhi spectre_v2_user its\nbogomips\t: 4599.99\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 57 bits virtual\npower management:\n\nprocessor\t: 2\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 207\nmodel name\t: INTEL(R) XEON(R) PLATINUM 8573C\nstepping\t: 2\nmicrocode\t: 0x1\ncpu MHz\t\t: 2299.998\ncache size\t: 266240 KB\nphysical id\t: 0\nsiblings\t: 5\ncore id\t\t: 2\ncpu cores\t: 5\napicid\t\t: 2\ninitial apicid\t: 2\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 28\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs retbleed bhi spectre_v2_user its\nbogomips\t: 4599.99\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 57 bits virtual\npower management:\n\nprocessor\t: 3\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 207\nmodel name\t: INTEL(R) XEON(R) PLATINUM 8573C\nstepping\t: 2\nmicrocode\t: 0x1\ncpu MHz\t\t: 2299.998\ncache size\t: 266240 KB\nphysical id\t: 0\nsiblings\t: 5\ncore id\t\t: 3\ncpu cores\t: 5\napicid\t\t: 3\ninitial apicid\t: 3\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 28\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs retbleed bhi spectre_v2_user its\nbogomips\t: 4599.99\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 57 bits virtual\npower management:\n\nprocessor\t: 4\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 207\nmodel name\t: INTEL(R) XEON(R) PLATINUM 8573C\nstepping\t: 2\nmicrocode\t: 0x1\ncpu MHz\t\t: 2299.998\ncache size\t: 266240 KB\nphysical id\t: 0\nsiblings\t: 5\ncore id\t\t: 4\ncpu cores\t: 5\napicid\t\t: 4\ninitial apicid\t: 4\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 28\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs retbleed bhi spectre_v2_user its\nbogomips\t: 4599.99\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 57 bits virtual\npower management:\n\n"
+}

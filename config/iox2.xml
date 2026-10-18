@@ -1,0 +1,12 @@
+<CycloneDDS xmlns="https://cdds.io/config">
+  <Domain>
+    <General>
+      <Interfaces>
+        <NetworkInterface address="127.0.0.1"/>
+        <PubSubMessageExchange type="iox2" priority="1000000" config="INSTANCE_NAME=cyclonedds_iox2_bench;"/>
+      </Interfaces>
+      <AllowMulticast>spdp</AllowMulticast>
+    </General>
+    <Discovery><ParticipantIndex>auto</ParticipantIndex></Discovery>
+  </Domain>
+</CycloneDDS>

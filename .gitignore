@@ -1,0 +1,6 @@
+/build/
+/install/
+/dist/
+/version
+/benchmarks/results/
+/benchmarks/rust/target/

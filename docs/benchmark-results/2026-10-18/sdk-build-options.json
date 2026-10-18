@@ -1,0 +1,39 @@
+{
+  "iceoryx2": {
+    "BUILD_CXX": "OFF",
+    "BUILD_EXAMPLES": "OFF",
+    "BUILD_TESTING": "OFF",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CXX_COMPILER": "/usr/bin/c++",
+    "CMAKE_CXX_FLAGS": "",
+    "CMAKE_C_COMPILER": "/usr/bin/cc",
+    "CMAKE_C_FLAGS": "-I/workspace/.onboarding/sysroot/usr/include",
+    "RUST_BUILD_ARTIFACT_PATH": "/workspace/cyclonedds-iox2/iceoryx2/target/release"
+  },
+  "cyclonedds": {
+    "BUILD_EXAMPLES": "ON",
+    "BUILD_SHARED_LIBS": "ON",
+    "BUILD_TESTING": "ON",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_C_COMPILER": "/usr/bin/cc",
+    "CMAKE_C_FLAGS": "-I/workspace/.onboarding/sysroot/usr/include",
+    "ENABLE_ICEORYX2": "ON",
+    "ENABLE_QOS_PROVIDER": "ON",
+    "ENABLE_TOPIC_DISCOVERY": "ON",
+    "ENABLE_TYPELIB": "ON",
+    "EXPORT_ALL_SYMBOLS": "OFF"
+  },
+  "cyclonedds-cxx": {
+    "BUILD_DDSLIB": "ON",
+    "BUILD_EXAMPLES": "ON",
+    "BUILD_TESTING": "ON",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CXX_COMPILER": "/usr/bin/c++",
+    "CMAKE_CXX_FLAGS": "",
+    "CMAKE_C_COMPILER": "/usr/bin/cc",
+    "CMAKE_C_FLAGS": "-I/workspace/.onboarding/sysroot/usr/include",
+    "ENABLE_QOS_PROVIDER": "ON",
+    "ENABLE_TOPIC_DISCOVERY": "ON",
+    "ENABLE_TYPELIB": "ON"
+  }
+}

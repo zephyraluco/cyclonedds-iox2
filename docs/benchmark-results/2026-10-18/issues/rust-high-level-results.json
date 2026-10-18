@@ -1,0 +1,14 @@
+[
+  {
+    "mode": "udp",
+    "outcome": "passed",
+    "client_exit": 0,
+    "server_exit": 0
+  },
+  {
+    "mode": "iox2",
+    "outcome": "unsupported_upstream_psmx_callback",
+    "client_exit": 1,
+    "server_exit": 1
+  }
+]

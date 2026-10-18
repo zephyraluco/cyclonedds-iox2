@@ -1,0 +1,17 @@
+[
+  {
+    "language": "c",
+    "outcome": "rejected_wrong_transport",
+    "exit_code": 2
+  },
+  {
+    "language": "cpp",
+    "outcome": "rejected_wrong_transport",
+    "exit_code": 2
+  },
+  {
+    "language": "rust",
+    "outcome": "rejected_wrong_transport",
+    "exit_code": 101
+  }
+]

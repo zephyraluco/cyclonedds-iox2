@@ -35,7 +35,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential cmake ninja-build pkg-config libacl1-dev git
+          sudo apt-get install -y build-essential cmake ninja-build pkg-config libacl1-dev libclang-dev git
 
       - name: Make scripts executable
         run: |
@@ -44,8 +44,34 @@ jobs:
       - name: Run build script
         env:
           CARGO_HOME: ${{ github.workspace }}/.cargo
+          CARGO_BUILD_JOBS: 2
+          CMAKE_BUILD_PARALLEL_LEVEL: 2
         run: |
-          ./tools/build.sh
+          ./tools/build.sh --build-cxx
+
+      - name: Build C, C++, and official Rust binding benchmarks
+        env:
+          CARGO_HOME: ${{ github.workspace }}/.cargo
+          CARGO_BUILD_JOBS: 2
+          CMAKE_BUILD_PARALLEL_LEVEL: 2
+          CYCLONEDDS_HOME: ${{ github.workspace }}/install/usr/local
+        run: bash tools/build_benchmarks.sh
+
+      - name: Check transports and language interoperability
+        env:
+          CYCLONEDDS_HOME: ${{ github.workspace }}/install/usr/local
+        run: |
+          python3 benchmarks/run.py --samples 64 --warmup 32 --repeats 1 --interop --output benchmarks/results/ci
+          python3 benchmarks/probe_rust_api.py --output benchmarks/results/rust-high-level
+          python3 benchmarks/check_guards.py --output benchmarks/results/negative-guards
+
+      - name: Upload integration diagnostics
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: integration-${{ matrix.arch }}
+          path: benchmarks/results/
+          if-no-files-found: ignore
 
       - name: Create deb package
         run: |

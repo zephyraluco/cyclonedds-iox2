@@ -1,0 +1,6 @@
+
+thread 'main' (15732) panicked at src/main.rs:127:13:
+assertion `left == right` failed: Rust writer SHM mismatch
+  left: false
+ right: true
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

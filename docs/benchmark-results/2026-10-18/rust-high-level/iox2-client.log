@@ -1,0 +1,2 @@
+sertype_ops::get_serialized_size<high_level_probe::Small>((0x55c6ff964460, 2, 0x7ffd8c5ee730, 0x7ffd8c5ee5e8, 0x7ffd8c5ee5e6))
+Error: "high-level receive timeout (inspect PSMX callback logs)"

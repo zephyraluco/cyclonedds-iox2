@@ -1,0 +1,5 @@
+module ShmBench {
+  @final struct Small  { unsigned long long seq; octet payload[56]; };
+  @final struct Medium { unsigned long long seq; octet payload[4088]; };
+  @final struct Large  { unsigned long long seq; octet payload[65528]; };
+};

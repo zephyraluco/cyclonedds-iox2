@@ -1,0 +1,10 @@
+# CycloneDDS's current PSMX plugin does not map DDS history depth to these
+# service defaults. The upstream iceoryx2 default is 2 slots with safe overflow,
+# which can silently replace samples during a burst despite DDS RELIABLE QoS.
+[defaults.publish-subscribe]
+subscriber-max-buffer-size = 64
+# Samples stored in the DDS reader history still count as iceoryx2 borrows;
+# reserve more than KEEP_LAST(64) plus the application's window(16).
+subscriber-max-borrowed-samples = 128
+publisher-max-loaned-samples = 16
+enable-safe-overflow = false
