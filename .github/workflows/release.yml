@@ -31,6 +31,8 @@ jobs:
         uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable
+          # Keep upstream dependency warnings visible without treating them as errors.
+          rustflags: ""
 
       - name: Install system dependencies
         run: |
