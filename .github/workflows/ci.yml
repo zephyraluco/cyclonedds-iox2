@@ -45,7 +45,7 @@ jobs:
         env:
           CARGO_HOME: ${{ github.workspace }}/.cargo
         run: |
-          ./tools/build.sh
+          ./tools/build.sh --build-cxx
 
       - name: Create deb package
         run: |
